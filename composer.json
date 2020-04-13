@@ -1,0 +1,30 @@
+{
+    "name": "cadusite",
+    "description": "Just another developer's personal webpage.",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Cadu",
+            "email": "carrinhoedu@gmail.com",
+            "homepage": "http://wwww.carloscarrinho.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Support/Config.php",
+            "source/Support/Helpers.php"
+        ]
+    },
+    "require": {
+        "php": "^7.1",
+        "ext-pdo": "^7.1",
+        "coffeecode/router": "^1.0"
+    }
+}
