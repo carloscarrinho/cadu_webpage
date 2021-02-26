@@ -1,0 +1,34 @@
+<?php
+/**
+* Copyright © CarlosCarrinho, Inc. All rights reserved.
+* See COPYING.txt for license details.
+*/
+
+### APPLICATION KEY ###
+define('CONF_APP_KEY', '');
+
+### E-MAIL ###
+define('CONF_MAIL_SECRET', '');
+define('CONF_MAIL_HOST', '');
+define('CONF_MAIL_PORT', 587);
+define('CONF_MAIL_PASSWORD', '');
+define('CONF_MAIL_USERNAME', '');
+define('CONF_MAIL_FROM', '');
+define('CONF_MAIL_DEBUGOUTPUT', 'html');
+
+### DATABASES ###
+# DEVELOPMENT || PRODUCTION #
+define('CONF_DB_HOSTNAME', '127.0.0.1:3306');
+define('CONF_DB_USERNAME', 'root');
+define('CONF_DB_PASSWORD', '1234');
+define('CONF_DB_NAME', '');
+
+### TEST ###
+// define('CONF_DB_TEST', 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/tests/test_database.sqlite');
+define('CONF_DB_NAME_TEST', '');
+
+### VIEWS ###
+define('CONF_VIEW_DIR_SITE', $_SERVER['DOCUMENT_ROOT'] . 'src/views/site');
+define('CONF_VIEW_DIR_STORE', $_SERVER['DOCUMENT_ROOT'] . 'src/views/store');
+define('CONF_VIEW_DIR_ADMIN', $_SERVER['DOCUMENT_ROOT'] . 'src/views/admin');
+define('CONF_VIEW_DIR_CACHE', $_SERVER['DOCUMENT_ROOT'] . 'cache');
