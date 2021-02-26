@@ -1,10 +1,9 @@
 {
-    "name": "cadusite",
-    "description": "My portfolio webpage",
-    "minimum-stability": "stable",
+    "name": "carloscarrinho/cadusite",
+    "description": "My portfolio webpage.",
     "authors": [
         {
-            "name": "Cadu",
+            "name": "Carlos Eduardo Ferreira Carrinho",
             "email": "carrinhoedu@gmail.com",
             "homepage": "http://wwww.carloscarrinho.com",
             "role": "Developer"
@@ -15,16 +14,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Source\\": "source/"
+            "Cadu\\": "src/"
         },
         "files": [
-            "source/Support/Config.php",
-            "source/Support/Helpers.php"
+            "source/Support/config.php"
         ]
     },
     "require": {
-        "php": "^7.1",
-        "ext-pdo": "^7.1",
-        "coffeecode/router": "^1.0"
+        "slim/slim": "^4.5",
+        "slim/psr7": "^1.1",
+        "twig/twig": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
     }
 }
