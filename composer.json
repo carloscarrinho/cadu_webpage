@@ -17,7 +17,7 @@
             "Cadu\\": "src/"
         },
         "files": [
-            "source/Support/config.php"
+            "src/Support/config.php"
         ]
     },
     "require": {
