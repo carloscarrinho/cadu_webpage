@@ -27,7 +27,7 @@ class UserRepository implements UserRepositoryInterface
         $params = [ self::PRIMARY_KEY => (int)$id ];
         $data = $this->dao->read(
             self::TABLE,
-            self::PRIMARY_KEY,
+            "*",
             $params,
             1
         );

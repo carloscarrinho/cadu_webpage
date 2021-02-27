@@ -63,9 +63,14 @@ $app->post('/morpheus/users/create', function (Request $req, Response $res) {
     return $res->withHeader('Content-Type', 'application/json');
 });
 
+$app->get('/morpheus/users/{id}', function (Request $req, Response $res, $params) {
+    $userId = $req->getAttribute('id');
 
+    $result = (new UserController())->getUser($userId);
 
-
+    $res->getBody()->write(json_encode($result));
+    return $res->withHeader('Content-Type', 'application/json');
+});
 
 // Run app
 $app->run();

@@ -40,6 +40,12 @@ class UserController implements ControllerInterface
         return $authenticated;
     }
 
+    /**
+     * Create an user on database.
+     *
+     * @param  mixed $data
+     * @return void
+     */
     public function addUser($data)
     {
         $newUser = $this->user->create();
@@ -55,5 +61,18 @@ class UserController implements ControllerInterface
 
         $result = $result === 1 ? "User saved successfully" : $result;
         return $result;
+    }
+
+    public function getUser($id)
+    {
+        $repository = $this->user->create()->getRepo();
+        $user = $repository->getById($id)[0];
+
+        if(!$user) {
+            throw new Exception("User not found");
+        }
+
+        unset($user['c_passwd_user']);
+        return $user;
     }
 }
